@@ -36,7 +36,10 @@ class LoginTest {
         loginPage.clickLogin_Button();
 
         // Check if error message is shown
-        boolean isErrorMessageDisplayed = driver.findElements(By.cssSelector("#register-page > div > div.old-client-section.col-sm-5.pull-right > div > div.register-form > form > div.errorMsg")).size() > 0; // Example error message selector
+        boolean isErrorMessageDisplayed; // Example error message selector
+        if (driver.findElements(By.cssSelector("#register-page > div > div.old-client-section.col-sm-5.pull-right > div > div.register-form > form > div.errorMsg")).size() > 0)
+            isErrorMessageDisplayed = true;
+        else isErrorMessageDisplayed = false;
         Assertions.assertTrue(isErrorMessageDisplayed, "Error message should be displayed for invalid login credentials");
 
     }
