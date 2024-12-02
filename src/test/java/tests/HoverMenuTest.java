@@ -36,8 +36,9 @@ class HoverMenuTest {
 
 
         // Move the mouse away and verify the menu collapses (if applicable)
-        actions.moveByOffset(0, 0).perform();  // Move the mouse out of the menu
+        actions.moveByOffset(0, 0).perform();
         assertFalse(dropdownMenu.isDisplayed(), "The menu should collapse after mouse leaves.");
+
     }
 
     @AfterEach

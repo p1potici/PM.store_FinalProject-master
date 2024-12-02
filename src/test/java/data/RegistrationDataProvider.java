@@ -8,7 +8,7 @@ public class RegistrationDataProvider {
 
     public static Stream<Arguments> validRegistrationData() {
         return Stream.of(
-                Arguments.of("John.Doee@example.com", "John", "Doe", "Test123!", "Test123!")
+                Arguments.of("John.Doeei@example.com", "John", "Doe", "Test123!", "Test123!")
         );
     }
 
